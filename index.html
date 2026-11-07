@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huraira AI - All In One</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">HURAIRA AI - POWERFUL TOOL</div>
+
+<div class="box">
+<h2>1. Product Source - Sab Yahan Se</h2>
+<button onclick="getProduct('markaz')">MARKAZ APP</button>
+<button onclick="getProduct('daraz')">DARAZ</button>
+<button onclick="getProduct('priceoye')">PRICEOYE</button>
+<button onclick="getProduct('goto')">GOTO</button>
+<button onclick="getProduct('temu')">TEMU / ALIEXPRESS</button>
+</div>
+
+<div class="box">
+<h2>2. AI Brain - 6 API Select Karo</h2>
+<select id="aiProvider">
+<option value="gemini1">Gemini API 1</option>
+<option value="gemini2">Gemini API 2</option>
+<option value="groq1">Groq API 1</option>
+<option value="groq2">Groq API 2</option>
+<option value="hugging1">Hugging Face 1</option>
+<option value="openai1">OpenAI 1</option>
+</select>
+<input id="apiKey" placeholder="Yahan Apni Free API Key Dalo">
+<button class="green" onclick="makeUrdu()">AI Se Urdu Description Banao</button>
+<p id="result">Yahan Asaan Urdu Aye Gi...</p>
+</div>
+
+<div class="box">
+<h2>3. Margin + Profit</h2>
+<input id="basePrice" value="500" type="number">
+<input id="myProfit" value="450" type="number">
+<button class="black" onclick="calc()">Sale Price Banao</button>
+<h1 id="finalPrice">950 Rs</h1>
+</div>
+
+<div class="box">
+<h2>4. Har Jaga Post - Official API Se</h2>
+<button class="blue" onclick="postTo('facebook')">Facebook Page + Group</button>
+<button class="green" onclick="postTo('whatsapp')">WhatsApp Business</button>
+<button class="black" onclick="postTo('instagram')">Instagram</button>
+<button class="black" onclick="postTo('x')">X Twitter</button>
+<p id="postStatus"></p>
+</div>
+
+<div class="box">
+<h2>5. Customer Se Baat - Auto Reply</h2>
+<input id="customerMsg" placeholder="Customer ne likha: Price?">
+<button class="green" onclick="autoReply()">AI Jawab Do</button>
+<p id="aiReply"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
